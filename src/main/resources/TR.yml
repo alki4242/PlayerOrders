@@ -1,0 +1,37 @@
+prefix: "&7PlayerOrders >>"
+
+reward: "Ödül"
+amount: "Miktar"
+
+plugin:
+  enable: "&aEklenti başarıyla etkinleştirildi"
+  disable: "&cEklenti devre dışı bırakıldı"
+
+mymenu.title: "Siparişlerim"
+menu.title: "Aktif Siparişler"
+menu.item.name: "&aSipariş #%id%"
+menu.item.sender: "&7Gönderen: &f%sender%"
+menu.item.reward: "&7Ödül: &6%reward%$"
+menu.item.completed: "&7Tamamlandı: &f%completed%"
+menu.item.id: "&7ID: &f%id%"
+menu.next: "&aSonraki Sayfa →"
+menu.previous: "&c← Önceki Sayfa"
+order.completed: "&a#%id% numaralı siparişi tamamladın ve &6%reward%$ &akazandın!"
+order.not_enough: "&cBu siparişi tamamlamak için yeterli eşyan yok!"
+order.only_players: "&cBu komutu sadece oyuncular kullanabilir!"
+order.own_completed: "&aSiparişin tamamlandı. Kasanı kontrol et"
+usage:
+  main: "&c/order <alt-komut>"
+  create: "&c/order create <eşyaAdı> <miktar> <ödül>"
+  remove: "&c/order remove <id>"
+create:
+  successful: "&aSipariş başarıyla oluşturuldu"
+  not_enough_money: "&cYeterli paran yok. Gerekli miktar: %amount%"
+  invalid_item: "&cBu geçerli bir Minecraft eşyası değil"
+remove:
+  not_valid_order: "&cBu geçerli bir sipariş değil"
+  not_owner: "&cBu siparişin sahibi sen değilsin"
+  successful: "&aSipariş başarıyla kaldırıldı"
+vault:
+  title: "Kasa"
+  item_taken: "&aEşyayı kasandan aldın"
