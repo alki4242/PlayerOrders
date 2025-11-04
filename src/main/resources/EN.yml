@@ -1,13 +1,11 @@
 prefix: "&7PlayerOrders >>"
 
-
 reward: "Reward"
 amount: "Amount"
 
 plugin:
   enable: "&aPlugin has been enabled"
   disable: "&cPlugin has been disabled"
-
 mymenu.title: "My Orders"
 menu.title: "Active Orders"
 menu.item.name: "&aOrder #%id%"
@@ -27,8 +25,9 @@ usage:
   remove: "&c/order remove <id>"
 create:
   successful: "&aYou have created an order successfully"
-  not_enough_money: "&cYou have not enough money. You need %amount%"
+  not_enough_money: "&cYou have not enough money. You should have %amount%"
   invalid_item: "&cThis item is not a minecraft item"
+  bigger_than_max: "&cYou can't set amount bigger than 64"
 remove:
   not_valid_order: "&cThis order is not valid"
   not_owner: "&cYou are not owner of this order"

@@ -6,7 +6,6 @@ amount: "Miktar"
 plugin:
   enable: "&aEklenti başarıyla etkinleştirildi"
   disable: "&cEklenti devre dışı bırakıldı"
-
 mymenu.title: "Siparişlerim"
 menu.title: "Aktif Siparişler"
 menu.item.name: "&aSipariş #%id%"
@@ -28,6 +27,7 @@ create:
   successful: "&aSipariş başarıyla oluşturuldu"
   not_enough_money: "&cYeterli paran yok. Gerekli miktar: %amount%"
   invalid_item: "&cBu geçerli bir Minecraft eşyası değil"
+  bigger_than_max: "&cMiktarı 64'ten daha fazla yapamazsın"
 remove:
   not_valid_order: "&cBu geçerli bir sipariş değil"
   not_owner: "&cBu siparişin sahibi sen değilsin"
