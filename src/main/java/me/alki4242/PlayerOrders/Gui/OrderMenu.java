@@ -132,6 +132,7 @@ public class OrderMenu implements Listener {
         Order order = orderManager.getOrder(id);
         if (order == null) return;
         if (order.isCompleted()) return;
+        if (order.getSender().equals(p.getName())) return;
         Material mat = Material.matchMaterial(order.getItem());
         if (mat == null) return;
 
