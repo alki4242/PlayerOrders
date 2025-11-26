@@ -1,0 +1,20 @@
+name: PlayerOrders
+version: 'b1.0'
+main: me.alki4242.PlayerOrders.PlayerOrders
+api-version: '1.17'
+authors: [ alki4242 ]
+description: An order system
+depend: ["Vault"]
+
+commands:
+  order:
+    permission: order.user
+    description: The main command of the plugin
+
+permissions:
+  order.user:
+    default: true
+    description: The permission to use main commands
+
+libraries:
+  - org.json:json:20250517

@@ -29,6 +29,10 @@ public class orderCreate {
             sender.sendMessage(Lang.get("create.invalid_item"));
             return;
         }
+        if (amount > 64) {
+            sender.sendMessage(Lang.get("create.bigger_than_max"));
+            return;
+        }
         if (eco.getBalance(sender.getName()) < reward) {
             sender.sendMessage(Lang.get("create.not_enough_money").replace("%amount%",String.valueOf(reward)));
             return;
