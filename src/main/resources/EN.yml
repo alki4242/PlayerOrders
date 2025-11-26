@@ -1,0 +1,39 @@
+prefix: "&7PlayerOrders >>"
+
+reward: "Reward"
+amount: "Amount"
+
+plugin:
+  enable: "&aPlugin has been enabled"
+  disable: "&cPlugin has been disabled"
+mymenu.title: "My Orders"
+menu.title: "Active Orders"
+menu.item.name: "&aOrder #%id%"
+menu.item.sender: "&7Sender: &f%sender%"
+menu.item.reward: "&7Reward: &6%reward%$"
+menu.item.completed: "&7Completed: &f%completed%"
+menu.item.id: "&7ID: &f%id%"
+menu.next: "&aNext Page →"
+menu.previous: "&c← Previous Page"
+order.completed: "&aYou have completed order #%id% and earned &6%reward%$"
+order.not_enough: "&cYou don't have enough items to complete this order!"
+order.only_players: "&cOnly players can use this command!"
+order.own_completed: "&aYour order has been completed. Check your vault"
+usage:
+  main: "&c/order <sub-command>"
+  create: "&c/order create <itemName> <amount> <reward>"
+  remove: "&c/order remove <id>"
+create:
+  successful: "&aYou have created an order successfully"
+  not_enough_money: "&cYou have not enough money. You should have %amount%"
+  invalid_item: "&cThis item is not a minecraft item"
+  bigger_than_max: "&cYou can't set amount bigger than 64"
+remove:
+  not_valid_order: "&cThis order is not valid"
+  not_owner: "&cYou are not owner of this order"
+  successful: "&aYou have removed your order successfully"
+vault:
+  title: "Vault"
+  item_taken: "&aYou have taken your item from your vault"
+
+
