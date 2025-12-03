@@ -1,16 +1,14 @@
 package me.alki4242.PlayerOrders.Gui;
 
+import me.alki4242.PlayerOrders.Events.OrderCompleteEvent;
 import me.alki4242.PlayerOrders.Managers.OrderManager;
 import me.alki4242.PlayerOrders.Managers.VaultManager;
 import me.alki4242.PlayerOrders.Objects.Order;
-import me.alki4242.PlayerOrders.PlayerOrders;
-import me.alki4242.PlayerOrders.Utils.Database;
 import me.alki4242.PlayerOrders.Utils.Lang;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,7 +16,6 @@ import org.bukkit.event.inventory.InventoryClickEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.Plugin;
 
 import java.util.*;
@@ -146,6 +143,7 @@ public class OrderMenu implements Listener {
             vaultManager.addToVault(order.getSender(), order.getItem(), order.getAmount());
             order.setCompleted(true);
             order.saveToDatabase();
+            Bukkit.getPluginManager().callEvent(new OrderCompleteEvent(p.getName(),order));
             if (plugin.getConfig().getBoolean("Remove-Completed-Orders")) orderManager.removeOrder(id);
             p.closeInventory();
         } else {

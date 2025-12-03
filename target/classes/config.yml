@@ -1,5 +1,5 @@
 # Version of the config file. DO NOT TOUCH IT!
-config-version: b1.0
+config-version: b1.1
 # (EN,TR) Do not forget to write it in all capital.
 Language: EN
 # Whether completed orders should be removed from orders menu or not.

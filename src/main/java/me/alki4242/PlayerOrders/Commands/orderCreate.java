@@ -1,8 +1,10 @@
 package me.alki4242.PlayerOrders.Commands;
 
+import me.alki4242.PlayerOrders.Events.OrderCreateEvent;
 import me.alki4242.PlayerOrders.Managers.OrderManager;
 import me.alki4242.PlayerOrders.Utils.Lang;
 import net.milkbowl.vault.economy.Economy;
+import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.CommandSender;
 
@@ -47,5 +49,6 @@ public class orderCreate {
         //Create order
         orderManager.addOrder(id, sender.getName(), itemName,amount,reward,false);
         sender.sendMessage(Lang.get("create.successful"));
+        Bukkit.getPluginManager().callEvent(new OrderCreateEvent(sender.getName(),orderManager.getOrder(id)));
     }
 }
