@@ -1,5 +1,5 @@
 name: PlayerOrders
-version: 'b1.1'
+version: '1.0'
 main: me.alki4242.PlayerOrders.PlayerOrders
 api-version: '1.17'
 authors: [ alki4242 ]

@@ -3,6 +3,7 @@ package me.alki4242.PlayerOrders.Commands;
 import me.alki4242.PlayerOrders.Events.OrderCreateEvent;
 import me.alki4242.PlayerOrders.Managers.OrderManager;
 import me.alki4242.PlayerOrders.Utils.Lang;
+import me.alki4242.PlayerOrders.Utils.NumberCheck;
 import net.milkbowl.vault.economy.Economy;
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
@@ -24,8 +25,24 @@ public class orderCreate {
             return;
         }
         String itemName = args[1];
+        if (!NumberCheck.isDouble(args[2])) {
+            sender.sendMessage(Lang.get("create.invalid_number"));
+            return;
+        }
         int amount = Integer.parseInt(args[2]);
+        if (!NumberCheck.isDouble(args[3])) {
+            sender.sendMessage(Lang.get("create.invalid_number"));
+            return;
+        }
+        if (amount < 0) {
+            sender.sendMessage(Lang.get("create.invalid_number"));
+            return;
+        }
         double reward = Double.parseDouble(args[3]);
+        if (reward < 0) {
+            sender.sendMessage(Lang.get("create.invalid_number"));
+            return;
+        }
          Material mat = Material.getMaterial(itemName.toUpperCase());
         if (mat == null || !mat.isItem()) {
             sender.sendMessage(Lang.get("create.invalid_item"));

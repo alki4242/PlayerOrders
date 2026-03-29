@@ -14,7 +14,7 @@ public class ListenerManager {
     private final Economy eco;
 
     /**
-     * Initate the class
+     * Initiate the class
      * @param orderManager get OrderManager
      * @param eco get Economy class
      */

@@ -24,6 +24,7 @@ usage:
   create: "&c/order create <eşyaAdı> <miktar> <ödül>"
   remove: "&c/order remove <id>"
 create:
+  invalid_number: "&c0'dan büyük bir sayı girmen gerekli"
   successful: "&aSipariş başarıyla oluşturuldu"
   not_enough_money: "&cYeterli paran yok. Gerekli miktar: %amount%"
   invalid_item: "&cBu geçerli bir Minecraft eşyası değil"

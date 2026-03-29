@@ -24,6 +24,7 @@ usage:
   create: "&c/order create <itemName> <amount> <reward>"
   remove: "&c/order remove <id>"
 create:
+  invalid_number: "&cYou have to input a number bigger than 0"
   successful: "&aYou have created an order successfully"
   not_enough_money: "&cYou have not enough money. You should have %amount%"
   invalid_item: "&cThis item is not a minecraft item"
